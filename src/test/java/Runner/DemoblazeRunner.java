@@ -5,7 +5,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		
-		features="src//test//resources//features//demoblaze.feature")
+		features="src//test//resources//features//demoblaze.feature",
+		glue={"StepDefs"}
+		)
 
 public class DemoblazeRunner extends AbstractTestNGCucumberTests {
 
