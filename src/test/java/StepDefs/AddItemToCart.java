@@ -40,8 +40,8 @@ public class AddItemToCart {
 	  driver.findElement(By.id("loginusername")).sendKeys("kekran");
 	  driver.findElement(By.id("loginpassword")).sendKeys("kekran");
 	  driver.findElement(By.xpath("//button[text()='Log in']")).click();
-	  WebElement wel= driver.findElement(By.id("nameofuser"));
-	  wait.until(ExpectedConditions.elementToBeClickable(wel));
+	  WebElement wel= driver.findElement(By.xpath("//li/a[text()='Welcome kekran']"));
+//      wait.until(ExpectedConditions.attributeToBe(wel, "nameofuser", "Welcome kekran"));
 	  Assert.assertEquals(wel.getText(), "Welcome kekran");
 	}
 	
@@ -49,8 +49,8 @@ public class AddItemToCart {
 	@When("Add Item to cart")
 	public void add_item_to_cart(DataTable dataTable) {
 		wait= new WebDriverWait(driver, Duration.ofSeconds(30));
-		List<List<String>> data= dataTable.asLists();
-		String item= data.get(0).get(0);
+		List<String> data= dataTable.asList();
+		String item= data.get(1);
 		item1=item;
 		
 		WebElement home= driver.findElement(By.xpath("//li/a[contains(text(),'Home')]"));
@@ -66,6 +66,7 @@ public class AddItemToCart {
 	@Then("Item must added to the cart")
 	public void item_must_added_to_the_cart() {
 		boolean count =false;
+		driver.findElement(By.xpath("//a[contains(text(),'Cart')]")).click();
 		  List<WebElement> cartlist=driver.findElements(By.xpath("//td[2]"));
 		  for(WebElement cartslist: cartlist)
 		  {

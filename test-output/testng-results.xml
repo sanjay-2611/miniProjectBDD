@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9295" started-at="2023-03-12T21:43:38 IST" finished-at="2023-03-12T21:43:48 IST">
+  <suite name="Default suite" duration-ms="24228" started-at="2023-03-12T22:02:13 IST" finished-at="2023-03-12T22:02:37 IST">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="9295" started-at="2023-03-12T21:43:38 IST" finished-at="2023-03-12T21:43:48 IST">
+    <test name="Default test" duration-ms="24228" started-at="2023-03-12T22:02:13 IST" finished-at="2023-03-12T22:02:37 IST">
       <class name="Runner.DemoblazeRunner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="setUpClass" is-config="true" duration-ms="3373" started-at="2023-03-12T21:43:39 IST" finished-at="2023-03-12T21:43:42 IST">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="setUpClass" is-config="true" duration-ms="3341" started-at="2023-03-12T22:02:13 IST" finished-at="2023-03-12T22:02:16 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@178270b2]]>
+                <![CDATA[org.testng.TestRunner@9a2ec9b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="runScenario" duration-ms="5855" started-at="2023-03-12T21:43:42 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-12T21:43:48 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="runScenario" duration-ms="20807" started-at="2023-03-12T22:02:17 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-12T22:02:37 IST">
           <params>
             <param index="0">
               <value>
@@ -34,59 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: element is not attached to the page document
-  (Session info: chrome=110.0.5481.180)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b3a30da72e80bd1ada6018b3deef6082, isElementDisplayed {id=5af5c9e1-100d-4741-9edc-3a80ed94788c}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.180, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\PALANI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55179/devtoo..., se:cdpVersion: 110.0.5481.180, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (b3a30da72e80bd1ada6018b3deef6082)] -> id: nameofuser]
-Session ID: b3a30da72e80bd1ada6018b3deef6082]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=110.0.5481.180)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b3a30da72e80bd1ada6018b3deef6082, isElementDisplayed {id=5af5c9e1-100d-4741-9edc-3a80ed94788c}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.180, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\PALANI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55179/devtoo..., se:cdpVersion: 110.0.5481.180, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (b3a30da72e80bd1ada6018b3deef6082)] -> id: nameofuser]
-Session ID: b3a30da72e80bd1ada6018b3deef6082
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:313)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:660)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-at StepDefs.AddItemToCart.login_into_app(AddItemToCart.java:44)
-at ✽.Login Into App(file:///E:/SDET%20Training%20WS/miniCaseBDD/src/test/resources/features/demoblaze.feature:7)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="tearDownClass" is-config="true" duration-ms="24" started-at="2023-03-12T21:43:48 IST" finished-at="2023-03-12T21:43:48 IST">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="tearDownClass" is-config="true" duration-ms="16" started-at="2023-03-12T22:02:37 IST" finished-at="2023-03-12T22:02:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
