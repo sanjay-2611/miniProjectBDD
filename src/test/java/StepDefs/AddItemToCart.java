@@ -41,7 +41,6 @@ public class AddItemToCart {
 	  driver.findElement(By.id("loginpassword")).sendKeys("kekran");
 	  driver.findElement(By.xpath("//button[text()='Log in']")).click();
 	  WebElement wel= driver.findElement(By.xpath("//li/a[text()='Welcome kekran']"));
-//      wait.until(ExpectedConditions.attributeToBe(wel, "nameofuser", "Welcome kekran"));
 	  Assert.assertEquals(wel.getText(), "Welcome kekran");
 	}
 	
