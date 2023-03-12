@@ -18,7 +18,7 @@ import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AddItemToCart {
-	static WebDriver driver;
+	public static WebDriver driver;
 	WebDriverWait wait;
 	String item1;
 	@BeforeAll
@@ -77,5 +77,39 @@ public class AddItemToCart {
 		  
 			  Assert.assertTrue(count);
 		  
+	}
+	
+	@When("List of items available in the cart")
+	public void list_of_items_available_in_the_cart() {
+		  List<WebElement> beforeDelete = driver.findElements(By.xpath("//tr[@class='success']"));
+		  int before=beforeDelete.size();
+		  Assert.assertTrue(before>0);
+	}
+	@Then("Delete an item from cart")
+	public void delete_an_item_from_cart() {
+		driver.findElement(By.xpath("(//td[4]//a)[1]")).click();
+	}
+	
+	@When("Items should be available in the cart")
+	public void items_should_be_available_in_the_cart() {
+		List<WebElement> beforeDelete = driver.findElements(By.xpath("//tr[@class='success']"));
+		  int before=beforeDelete.size();
+		  Assert.assertTrue(before>0);
+	}
+	@Then("Place Order")
+	public void place_order() {
+		driver.findElement(By.xpath("//button[contains(text(),'Place Order')]")).click();
+	}
+	@Then("purchase items")
+	public void purchase_items() {
+		 driver.findElement(By.xpath("//input[@id='name']")).sendKeys("Jack Sparrow");
+		  driver.findElement(By.xpath("//input[@id='country']")).sendKeys("Japan");
+		  driver.findElement(By.xpath("//input[@id='city']")).sendKeys("Hiroshima");
+		  driver.findElement(By.xpath("//input[@id='card']")).sendKeys("1234567890");
+		  driver.findElement(By.xpath("//input[@id='month']")).sendKeys("February");
+		  driver.findElement(By.xpath("//input[@id='year']")).sendKeys("2025");
+		  driver.findElement(By.xpath("//button[text()='Purchase']")).click();
+		  Assert.assertEquals(driver.findElement(By.xpath("(//h2)[3]")).getText(), "Thank you for your purchase!");
+		  driver.findElement(By.xpath("//button[text()='OK']")).click();
 	}
 }
