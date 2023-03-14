@@ -2,29 +2,31 @@
 Feature: Automating demoblaze website
 
   
-  Scenario Outline: Add Item to cart
+  Scenario: Login into App
   
-    Given Login Into App
-    
-    When Add Item to cart "<item>"
-    Then Item must added to the cart "<item>"
-    
-	Examples:
-		|item|
-			|Samsung galaxy s7| 
-			|Nokia lumia 1520|
-			|Iphone 6 32gb|
-			|Sony vaio i7|
+    Given User is on launch Page    
+    When  User Login
+    Then  Should display Home Page
 			
 			
-	Scenario: Delete an Item
+	Scenario Outline: Add items to cart
 #		Given Login Into App
-		When  List of items available in the cart
-		Then  Delete an item from cart
+		When  Add an item to cart "<item>"
+		Then  Delete an item from cart "<item>"
+		Examples:
+		|item|
+		|Nokia lumia 1520|
+		|Samsung galaxy s7|
+		|Iphone 6 32gb|
+		|Sony vaio i7|
 		
 
-	Scenario: place order
-			When Items should be available in the cart
-			Then Place Order
-			And purchase items
+	Scenario: Delete an item
+			When List of items should be available in cart
+			Then Delete an item from cart
+			
+	Scenario: Place Order
+			Given Items should be available in cart
+			When Place Order
+			Then Purchase Items 
 		
