@@ -1,4 +1,3 @@
-
 Feature: Automating demoblaze website
 
   
