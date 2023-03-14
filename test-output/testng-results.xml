@@ -1,147 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" ignored="0" total="3" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="99218" started-at="2023-03-12T22:59:32 IST" finished-at="2023-03-12T23:01:11 IST">
+  <suite name="Default suite" duration-ms="91551" started-at="2023-03-13T21:51:22 IST" finished-at="2023-03-13T21:52:54 IST">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.DemoblazeRunner@149494d8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="99218" started-at="2023-03-12T22:59:32 IST" finished-at="2023-03-12T23:01:11 IST">
+    <test name="Default test" duration-ms="91551" started-at="2023-03-13T21:51:22 IST" finished-at="2023-03-13T21:52:54 IST">
       <class name="Runner.DemoblazeRunner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="setUpClass" is-config="true" duration-ms="3205" started-at="2023-03-12T22:59:32 IST" finished-at="2023-03-12T22:59:35 IST">
+        <test-method status="FAIL" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.DemoblazeRunner@149494d8]" name="setUpClass" is-config="true" duration-ms="91494" started-at="2023-03-13T21:51:22 IST" finished-at="2023-03-13T21:52:54 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@766a4535]]>
+                <![CDATA[org.testng.TestRunner@521bb1a4]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.remote.http.ConnectionFailedException">
+            <message>
+              <![CDATA[Unable to establish websocket connection to http://localhost:50666/devtools/browser/33f1aff7-5c42-4629-8d30-f112af5be37d
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:50666/devtools/browser/33f1aff7-5c42-4629-8d30-f112af5be37d
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+at org.openqa.selenium.devtools.Connection.<init>(Connection.java:77)
+at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+at java.util.Optional.map(Optional.java:215)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+at StepDefs.AddItemToCart.startup(AddItemToCart.java:31)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.http.ConnectionFailedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="runScenario" duration-ms="35841" started-at="2023-03-12T22:59:35 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-12T23:00:11 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Add Item to cart"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Automating demoblaze website"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"item"}
-  (Session info: chrome=110.0.5481.180)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d667bd3691796cfacacf8107f3685bc3, findElement {using=link text, value=item}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.180, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\PALANI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56611}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56611/devtoo..., se:cdpVersion: 110.0.5481.180, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d667bd3691796cfacacf8107f3685bc3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"item"}
-  (Session info: chrome=110.0.5481.180)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d667bd3691796cfacacf8107f3685bc3, findElement {using=link text, value=item}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.180, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\PALANI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56611}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56611/devtoo..., se:cdpVersion: 110.0.5481.180, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d667bd3691796cfacacf8107f3685bc3
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at StepDefs.AddItemToCart.add_item_to_cart(AddItemToCart.java:60)
-at ✽.Add Item to cart(file:///E:/SDET%20Training%20WS/miniCaseBDD/src/test/resources/features/demoblaze.feature:9)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="runScenario" duration-ms="30072" started-at="2023-03-12T23:00:11 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-12T23:00:41 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Delete an Item"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Automating demoblaze website"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at StepDefs.AddItemToCart.list_of_items_available_in_the_cart(AddItemToCart.java:88)
-at ✽.List of items available in the cart(file:///E:/SDET%20Training%20WS/miniCaseBDD/src/test/resources/features/demoblaze.feature:20)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="runScenario" duration-ms="30017" started-at="2023-03-12T23:00:41 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-12T23:01:11 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["place order"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Automating demoblaze website"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at StepDefs.AddItemToCart.items_should_be_available_in_the_cart(AddItemToCart.java:99)
-at ✽.Items should be available in the cart(file:///E:/SDET%20Training%20WS/miniCaseBDD/src/test/resources/features/demoblaze.feature:25)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runner.DemoblazeRunner@646007f4]" name="tearDownClass" is-config="true" duration-ms="7" started-at="2023-03-12T23:01:11 IST" finished-at="2023-03-12T23:01:11 IST">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runner.DemoblazeRunner@149494d8]" name="tearDownClass" is-config="true" duration-ms="1" started-at="2023-03-13T21:52:54 IST" finished-at="2023-03-13T21:52:54 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
