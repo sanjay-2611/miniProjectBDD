@@ -11,13 +11,13 @@ Feature: Automating demoblaze website
 	Scenario Outline: Add items to cart
 #		Given Login Into App
 		When  Add an item to cart "<item>"
-		Then  Delete an item from cart "<item>"
+		Then  Items must be added to cart "<item>"
 		Examples:
 		|item|
 		|Nokia lumia 1520|
-		|Samsung galaxy s7|
-		|Iphone 6 32gb|
-		|Sony vaio i7|
+#		|Samsung galaxy s7|
+#		|Iphone 6 32gb|
+#		|Sony vaio i7|
 		
 
 	Scenario: Delete an item
