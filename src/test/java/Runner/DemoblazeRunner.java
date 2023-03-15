@@ -6,7 +6,9 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		
 		features="src//test//resources//features//demoblaze.feature",
-		glue={"StepDefs"}
+		glue={"StepDefs"},
+		plugin= {"pretty",
+				"html:target//Reports//HTMLReport.html",}
 		)
 
 public class DemoblazeRunner extends AbstractTestNGCucumberTests {
