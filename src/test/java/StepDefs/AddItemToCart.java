@@ -47,6 +47,7 @@ public class AddItemToCart {
 	public void user_login() throws InterruptedException 
 	{		
 		driver.findElement(By.id("login2")).click();
+		Thread.sleep(1000);
 		  driver.findElement(By.id("loginusername")).sendKeys("kekran");
 		  Thread.sleep(1000);
 		  driver.findElement(By.id("loginpassword")).sendKeys("kekran");
