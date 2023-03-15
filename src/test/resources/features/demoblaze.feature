@@ -16,7 +16,7 @@ Feature: Automating demoblaze website
 		|item|
 		|Nokia lumia 1520|
 #		|Samsung galaxy s7|
-#		|Iphone 6 32gb|
+		|Iphone 6 32gb|
 #		|Sony vaio i7|
 		
 

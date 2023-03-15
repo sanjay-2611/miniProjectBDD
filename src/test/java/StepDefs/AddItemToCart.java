@@ -44,17 +44,19 @@ public class AddItemToCart {
 	
 	
 	@When("User Login")
-	public void user_login() 
+	public void user_login() throws InterruptedException 
 	{		
 		driver.findElement(By.id("login2")).click();
 		  driver.findElement(By.id("loginusername")).sendKeys("kekran");
+		  Thread.sleep(1000);
 		  driver.findElement(By.id("loginpassword")).sendKeys("kekran");
 		  driver.findElement(By.xpath("//button[text()='Log in']")).click();	    
 	}
 	
 	@Then("Should display Home Page")
-	public void should_display_home_page()
+	public void should_display_home_page() throws InterruptedException
 	{
+		Thread.sleep(3000);
 		 WebElement wel= driver.findElement(By.xpath("//li/a[text()='Welcome kekran']"));
 		  Assert.assertEquals(wel.getText(), "Welcome kekran");
 	}
@@ -62,6 +64,7 @@ public class AddItemToCart {
 	@When("Add an item to cart {string}")
 	public void add_an_item_to_cart(String string)
 	{
+		wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement home= driver.findElement(By.xpath("//li/a[contains(text(),'Home')]"));
 //		  wait.until(ExpectedConditions.elementToBeClickable(home));
 		  home.click();
@@ -71,13 +74,15 @@ public class AddItemToCart {
 		  Alert alert=driver.switchTo().alert();		  
 		  alert.accept();
 	}
-	@Then("Items must be added to cart {string} ")
-	public void items_must_be_added_to_cart (String string) 
+	@Then("Items must be added to cart {string}")
+	public void items_must_be_added_to_cart(String string) 
 	{
-		
+		wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		boolean count =false;
 		driver.findElement(By.xpath("//a[contains(text(),'Cart')]")).click();
-		  List<WebElement> cartlist=driver.findElements(By.xpath("//td[2]"));
+		 List<WebElement> cartlist=driver.findElements(By.xpath("//td[2]"));
+		wait.until(ExpectedConditions.visibilityOfAllElements(cartlist));
+		 
 		  for(WebElement cartslist: cartlist)
 		  {
 			  if(cartslist.getText().equalsIgnoreCase(string)) {
@@ -95,20 +100,24 @@ public class AddItemToCart {
 	
 	@When("List of items should be available in cart")
 	public void list_of_items_should_be_available_in_cart() { 
+		wait=new WebDriverWait(driver, Duration.ofSeconds(30));
+		driver.findElement(By.xpath("//a[contains(text(),'Cart')]")).click();
 		List<WebElement> beforeDelete = driver.findElements(By.xpath("//tr[@class='success']"));
+		wait.until(ExpectedConditions.visibilityOfAllElements(beforeDelete));
 		  int before=beforeDelete.size();
 		  Assert.assertTrue(before>0);
 	}
 	@Then("Delete an item from cart")
-	public void delete_an_item() {
+	public void delete_an_item() throws InterruptedException {
 		driver.findElement(By.xpath("(//td[4]//a)[1]")).click();
-		
+		Thread.sleep(2000);
 		
 	}
 	@Given("Items should be available in cart")
 	public void items_should_be_available_in_cart() 
-	{		
+	{		wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		List<WebElement> beforeDelete = driver.findElements(By.xpath("//tr[@class='success']"));
+		wait.until(ExpectedConditions.visibilityOfAllElements(beforeDelete));
 		  int before=beforeDelete.size();
 		  Assert.assertTrue(before>0);
 		  
@@ -116,14 +125,16 @@ public class AddItemToCart {
 		 
 	}
 	@When("Place Order")
-	public void Place_Order()
+	public void Place_Order() throws InterruptedException
 	{
 		driver.findElement(By.xpath("//button[contains(text(),'Place Order')]")).click();
+		
 	}
 	
 	@Then("Purchase Items")
-	public void Purchase_Items()
+	public void Purchase_Items() throws InterruptedException
 	{
+		Thread.sleep(4000);
 		  driver.findElement(By.xpath("//input[@id='name']")).sendKeys("Jack Sparrow");
 		  driver.findElement(By.xpath("//input[@id='country']")).sendKeys("Japan");
 		  driver.findElement(By.xpath("//input[@id='city']")).sendKeys("Hiroshima");
@@ -132,6 +143,7 @@ public class AddItemToCart {
 		  driver.findElement(By.xpath("//input[@id='year']")).sendKeys("2025");
 		  driver.findElement(By.xpath("//button[text()='Purchase']")).click();
 		  Assert.assertEquals(driver.findElement(By.xpath("(//h2)[3]")).getText(), "Thank you for your purchase!");
+		  Thread.sleep(2000);
 		  driver.findElement(By.xpath("//button[text()='OK']")).click();
 	}
 	
