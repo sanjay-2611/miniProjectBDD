@@ -82,7 +82,7 @@ public class AddItemToCart {
 		boolean count =false;
 		driver.findElement(By.xpath("//a[contains(text(),'Cart')]")).click();
 		 List<WebElement> cartlist=driver.findElements(By.xpath("//td[2]"));
-		wait.until(ExpectedConditions.visibilityOfAllElements(cartlist));
+//		wait.until(ExpectedConditions.visibilityOfAllElements(cartlist));
 		 
 		  for(WebElement cartslist: cartlist)
 		  {
